@@ -19,6 +19,7 @@
 :root {
     --fundo-principal: #f5f5f5;
     --texto: #222222;
+    --texto-claro: #5c5c5cad;
     --texto-inverso: #ffffff;
     --destaque: #ec261f;
     --destaque-inverso: #df6b67;
@@ -54,7 +55,7 @@ header #menu ul a {
     color: var(--texto);
     text-decoration: none;
     font-weight: bolder;
-    padding: 15px 17px;
+    padding: 12px 15px;
     transition: color 0.8s, font 1.2s;
     border-radius: 15px;
 }
@@ -65,19 +66,32 @@ header #menu ul a:hover {
 }
 
 main {
-    display: grid;
+    /*display: grid;
     grid-template-columns: auto 90vw auto;
-    gap: 20px;
+    gap: 20px;*/
     margin-top: 20px;
 }
 
+h1 {
+    color: var(--texto);
+    margin-bottom: 8px;
+}
+
+p {
+    text-justify: auto;
+    text-indent: 5px;
+    line-height: 1.4em;
+}
+
+
 main #ficha {
     background-color: var(--fundo-card);
+    padding: 20px;
     border-radius: 8px;
     grid-column: 2;
 }
 
-main #ficha img {
+section#ficha img {
     width: 300px;
     aspect-ratio: 1/1;
     /*Dimensão da Imagem*/
@@ -90,13 +104,91 @@ main #ficha img {
     padding: 10px;
     display: block;
     margin: auto;
+    margin-bottom: 15px;
+}
+
+section#ficha h1 {
+    color: var(--texto);
+    margin: 15px 0;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+div#social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    gap: 1em;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+div#social a {
+    color: var(--texto);
+    text-decoration: none;
+    transition: color 0.6s;
+}
+
+div#social a:hover {
+    color: var(--texto-claro);
+}
+
+section#detalhes {
+    grid-column: 2;
+}
+
+section#tecnologias {
+    padding: 10px;
+    margin: 10px;
+}
+
+section#skills {
+    background-color: var(--fundo-card);
+    padding: 15px;
     margin-bottom: 10px;
 }
 
+section#skills .container-skills {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+}
 
+.container-skills .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-skills .barra {
+    background-color: var(--destaque);
+    border-radius: 5px;
+    padding: 4px;
+}
 
 @media screen and (min-width: 768px) {
     main {
-        grid-template-columns: auto 200px 1fr auto;
+        grid-template-columns: auto 300px 1fr auto;
+    }
+
+    #menu {
+        position: sticky;
+    }
+
+    section#ficha {
+        grid-column: 2 / 3;
+        height: fit-content;
+
+        top: 65px;
+    }
+
+    section#detalhes {
+        grid-column: 3 / 4;
+    }
+
+    #container-skills {
+        grid-template-columns: 1fr 1fr;
     }
 }
