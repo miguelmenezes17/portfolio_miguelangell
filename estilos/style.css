@@ -167,6 +167,7 @@ article#skills .container-skills {
 
 .container-skills .barra {
     background-color: var(--destaque);
+    color: var(--fundo-card);
     border-radius: 5px;
     padding: 4px;
 }
