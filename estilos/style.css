@@ -76,6 +76,8 @@ main {
 h1 {
     color: var(--texto);
     margin-bottom: 8px;
+    line-height: 35px;
+    text-align: center;
 }
 
 p {
