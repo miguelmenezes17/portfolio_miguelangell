@@ -31,6 +31,7 @@ body {
     line-height: 1.1em;
     background-color: var(--fundo-principal);
     color: var(--texto);
+    transition: background-color 2s, color 2s;
 }
 
 header {
@@ -39,28 +40,28 @@ header {
     padding: 15px 17px;
     display: flex;
     justify-content: end;
-    align-items: center;
-    top: 0;
+    align-content: center;
     position: sticky;
+    top: 0;
     z-index: 1;
 }
 
-header #menu ul {
+nav#menu ul {
+    list-style: none;
     display: flex;
-    list-style-type: none;
     gap: 10px;
 }
 
-header #menu ul a {
-    color: var(--texto);
+nav#menu ul a {
+    color: var(--texto-inverso);
     text-decoration: none;
-    font-weight: bolder;
+    font-weight: 600;
     padding: 12px 15px;
-    transition: color 0.8s, font 1.2s;
-    border-radius: 15px;
+    transition: color 0.8s, font 1.2s, background-color 0.5s;
+    border-radius: 5px;
 }
 
-header #menu ul a:hover {
+nav#menu ul a:hover {
     background-color: var(--destaque-inverso);
     color: var(--texto-inverso);
 }
@@ -80,18 +81,18 @@ h1 {
 p {
     text-justify: auto;
     text-indent: 5px;
-    line-height: 1.4em;
+    line-height: 1.7em;
 }
 
 
-main #ficha {
+section#ficha {
     background-color: var(--fundo-card);
     padding: 20px;
     border-radius: 8px;
     grid-column: 2;
 }
 
-section#ficha img {
+section#ficha img.foto {
     width: 300px;
     aspect-ratio: 1/1;
     /*Dimensão da Imagem*/
@@ -107,7 +108,7 @@ section#ficha img {
     margin-bottom: 15px;
 }
 
-section#ficha h1 {
+main>section#ficha h1 {
     color: var(--texto);
     margin: 15px 0;
     text-align: center;
@@ -143,13 +144,13 @@ section#tecnologias {
     margin: 10px;
 }
 
-section#skills {
+article#skills {
     background-color: var(--fundo-card);
     padding: 15px;
     margin-bottom: 10px;
 }
 
-section#skills .container-skills {
+article#skills .container-skills {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
@@ -168,7 +169,38 @@ section#skills .container-skills {
     padding: 4px;
 }
 
-@media screen and (min-width: 768px) {
+section#formacao {
+    padding: 10px;
+    background-color: var(--fundo-principal);
+}
+
+section#formacao h1 {
+    text-align: center;
+    margin: 30px auto;
+}
+
+section#formacao>.container-formacao {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin: 10px 5px;
+}
+
+section#formacao .curso {
+    background-color: var(--fundo-card);
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--texto);
+    border-bottom: 3px solid var(--destaque);
+    transition: border-bottom 1s;
+    cursor: pointer;
+}
+
+section#formacao .curso:hover {
+    border-bottom: 7px solid var(--destaque);
+}
+
+section#formacao @media screen and (min-width: 768px) {
     main {
         grid-template-columns: auto 300px 1fr auto;
     }
