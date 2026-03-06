@@ -175,6 +175,7 @@ section#formacao {
 }
 
 section#formacao h1 {
+    line-height: 35px;
     text-align: center;
     margin: 30px auto;
 }
@@ -200,7 +201,7 @@ section#formacao .curso:hover {
     border-bottom: 7px solid var(--destaque);
 }
 
-section#formacao @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
     main {
         grid-template-columns: auto 300px 1fr auto;
     }
