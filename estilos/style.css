@@ -201,6 +201,22 @@ section#formacao .curso:hover {
     border-bottom: 7px solid var(--destaque);
 }
 
+section#projetos {
+    min-height: 400px;
+    margin: 10px;
+    padding: 5px;
+    line-height: 20px;
+}
+
+section#projetos h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+section#projetos p {
+    text-indent: 15px;
+}
+
 @media screen and (min-width: 768px) {
     main {
         grid-template-columns: auto 300px 1fr auto;
