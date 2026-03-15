@@ -234,9 +234,8 @@ section#projetos p {
 }
 
 section#projetos>.project1 {
-    background-color: var(--fundo-card);
-    border: 1px solid black;
-    margin: 5px -15px;
+    background-color: var(--fundo-principal);
+    margin: 5px -30px;
     padding: 10px;
     display: block;
 }
@@ -250,7 +249,7 @@ section#projetos>.project1>.foto {
 
 
 section#projetos>.project1>.foto>img {
-    max-width: 60%;
+    max-width: 70%;
     border-radius: 30px;
 }
 
